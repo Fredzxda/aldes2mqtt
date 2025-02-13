@@ -332,7 +332,8 @@ async function analyseProduct(product: any) {
 			mqqtDevice: {
 				"identifiers": [details.serial_number],
 				"name": details.reference,
-				"model": "Aldes",
+				"manufacturer": "Aldes",
+				"model": details.reference,
 			},
 			nextS: 0,
 			nextM: 0,
