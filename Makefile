@@ -12,7 +12,7 @@ include .env.local
 	@echo ""
 
 # external resource #
-export MAKEFILE_URL=https://raw.githubusercontent.com/Smeagolworms4/auto-makefile/master
+export MAKEFILE_URL=https://raw.githubusercontent.com/Fredzxda/auto-makefile/master
 
 # import #
 $(shell [ ! -f docker/.makefiles/index.mk ] && mkdir -p docker/.makefiles && curl -L --silent -f $(MAKEFILE_URL)/docker-compose.mk -o docker/.makefiles/index.mk)
