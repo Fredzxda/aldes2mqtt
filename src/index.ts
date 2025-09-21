@@ -162,8 +162,8 @@ async function request(path: string, options: any = {}) {
 					'Content-Type': 'application/x-www-form-urlencoded'
 				},
 				body: new URLSearchParams({
-					'username': 'smeagolworms4@gmail.com',
-					'password': 'O2range!',
+					'username': aldes-login,
+					'password': aldes-password,
 					'grant_type': 'password'
 				})
 			})
