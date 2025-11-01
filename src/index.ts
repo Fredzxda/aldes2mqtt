@@ -162,8 +162,8 @@ async function request(path: string, options: any = {}) {
 					'Content-Type': 'application/x-www-form-urlencoded'
 				},
 				body: new URLSearchParams({
-					'username': ${aldes-login},
-					'password': ${aldes-password},
+					'username': `${aldesLogin}`,
+					'password': `${aldesPassword}`,
 					'grant_type': 'password'
 				})
 			})
@@ -230,14 +230,14 @@ function sendCommand(id: string, method: string, value: string) {
 const devices: any = {};
 
 const modeMapping = {
-	A: 'auto',
+	X: 'guest',
 	Z: 'programming',
 	V: 'daily',
 	W: 'vacation',
 	Y: 'boost',	
 };
 const modeRMapping = {
-	auto: 'A',
+	guest: 'X',
 	programming: 'Z',
 	daily: 'V',
 	vacation: 'W',
@@ -545,7 +545,7 @@ async function analyseProduct(product: any) {
 					state_topic: `${mqttPrefix}/${details.serial_number}/week_planning`,
 					value_template: `{{ value_json.${d}.h${h} }}`,
 					command_topic: `${mqttPrefix}/${details.serial_number}/set_week_planning_${d}_${h}`,
-					options: [ 'daily', 'vacation', 'boost' ],
+					options: [ 'daily', 'vacation', 'boost', 'guest' ],
 					device: device.mqqtDevice,
 				}));
 			}
@@ -599,3 +599,4 @@ const main = async () => {
 	}
 };
 main();
+
