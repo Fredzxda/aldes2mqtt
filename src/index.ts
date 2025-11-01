@@ -30,7 +30,7 @@ const args = minimist(rawArgv, {
 		'help',
 	],
 	alias: {
-		'mqtt-uri': 'm',
+		'': 'm',
 		'aldes-login': 'u',
 		'aldes-password': 'p',
 		'log': 'l',
@@ -162,8 +162,8 @@ async function request(path: string, options: any = {}) {
 					'Content-Type': 'application/x-www-form-urlencoded'
 				},
 				body: new URLSearchParams({
-					'username': aldes-login,
-					'password': aldes-password,
+					'username': ${aldes-login},
+					'password': ${aldes-password},
 					'grant_type': 'password'
 				})
 			})
