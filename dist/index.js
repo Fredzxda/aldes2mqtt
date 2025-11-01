@@ -180,8 +180,8 @@ async function request(path, options = {}) {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 body: new URLSearchParams({
-                    'username': aldes-login,
-                    'password': aldes-password,
+                    'username': ${aldes-login},
+                    'password': ${aldes-password},
                     'grant_type': 'password'
                 })
             })
